@@ -26,7 +26,7 @@ h1{
 }
 
 header p{
-  letter-spacing: 3px;
+  letter-spacing: 0.105em;
   font-size: 0.9em;
   color:antiquewhite;
 } 
