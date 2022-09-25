@@ -42,7 +42,8 @@ justify-content: space-around;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  background-color: #738ed1;
+  background-color: white;
+  /* #738ed1; */
   min-width: 200px;
   max-width: 300px;
   text-align: center;
@@ -52,9 +53,9 @@ justify-content: space-around;
   transition: 0.3s;
 }
 
-h3{
-  color: white;
-}
+/* h3{
+   color: white; 
+} */
 
 .personInfo *{
   margin: 0.8rem;
@@ -73,9 +74,9 @@ p.showMe{
   display: none;
 }
 
-img {
+/* img {
   display: none;
-}
+} */
 
 p.foot{
   display: flex;
@@ -90,18 +91,18 @@ p.foot{
 
 .card:hover {
   transform: scale(1.1);
-  background-color: white;
+  /* background-color: white; */
 }
 
 div.personInfo:hover p.showMe{
   display: block;
 }
 
-div.card:hover img{
+/* div.card:hover img{
   display: block;
-}
+} */
 
-div.card:hover h3{
+/* div.card:hover h3{
   color: black;
-}
+} */
 
