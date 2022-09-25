@@ -3,9 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style/index.css" rel="stylesheet"/>
     <title>Star Wars</title>
   </head>
   <body>
-    <!-- Write your implementation here -->
+
+    <header>
+      <h1>Project Starwars</h1>
+      <p>get to know your starwars character...</p>
+    </header>
+    
+    <div id="placeHolder">
+      <!-- 
+        displays cards of names and some properties associated with the name from an api
+        server. 
+       -->
+    </div>
+
+    <footer>
+      <p class = "foot" >copyright@2022 Arinze Darlington Ezeokwuegbu</p>
+    </footer>
+
+    <script>
+      // select the target element
+      const e = document.querySelector(":root");
+      // remove the last list item
+      e.parentElement.removeChild(e);
+  </script>
+
+    <script src="script/index.js" type="text/javascript"></script>
   </body>
 </html>
