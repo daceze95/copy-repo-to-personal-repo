@@ -31,7 +31,7 @@ header p{
   color:antiquewhite;
 } 
 
-#placeHolder{
+div#placeHolder{
 display: flex;
 flex-wrap: wrap;
 align-items: center;
@@ -53,12 +53,17 @@ justify-content: space-around;
   transition: 0.3s;
 }
 
-/* h3{
-   color: white; 
-} */
+h3{
+   color: rgb(5, 36, 64); 
+}
 
 .personInfo *{
   margin: 0.8rem;
+}
+
+img{
+  max-height: 350px;
+  max-width: 250px;
 }
 
 .birth_year, .gender{
@@ -96,13 +101,22 @@ p.foot{
 
 div.personInfo:hover p.showMe{
   display: block;
+  /* color: rgba(145, 143, 143, 0.969); */
+  /* color: rgb(206, 206, 234); */
 }
 
 /* div.card:hover img{
   display: block;
 } */
 
-/* div.card:hover h3{
-  color: black;
-} */
+ h3:hover{
+  text-shadow: 2px 2px 3px #738ed1, 0px 0px 10px #738ed1;
+}
+
+@media screen and(min-width: 480px){
+  p.foot{
+    font-size: 10px;
+  }
+}
+  
 

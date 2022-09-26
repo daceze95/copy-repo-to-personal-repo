@@ -21,16 +21,16 @@ modified the script to include async/await fuctionality
     main().then((data) => {
 
       let img = [
-        "https://loremflickr.com/320/240/dog",
-        "https://loremflickr.com/320/240",
-        "https://dummyimage.com/300",
-        "https://placekitten.com/640/360",
-        "https://loremflickr.com/320/240/paris",
-        "https://loremflickr.com/320/240/brazil,rio",
-        "https://loremflickr.com/320/240/paris,girl/all",
-        "https://placekitten.com/640/360",
-        "https://loremflickr.com/320/240/paris",
-        "https://loremflickr.com/320/240/dog",
+        {src:"images/luke.jpeg", alt:"luke_skywalker"},
+        {src:"images/C-3PO.jpeg", alt:"C-3PO_by_DevianartPinterest"},
+        {src:"images/R2-D2.png", alt:"R2-D2_by_Geek_Carl_Pinterest"},
+        {src:"images/darth.jpeg", alt:"Darth_varder_by_Devianart Pinterest"},
+        {src:"images/Leia.jpeg", alt:"Leia_organa_by_Artstation Pinterest"} ,
+        {src:"images/owens.jpeg", alt:"Owens_by_click.linksynergy.com Pinterest"},
+        {src:"images/Beru.jpeg", alt:"Beru_by_Annie _ilkinson Pinterest"},
+        {src:"images/R5-D4.jpeg", alt:"R5-D5_by_artmarta_Pinterest"},
+        {src:"images/Biggs.jpeg", alt:"Biggs_by_thefloodgallery.com Pinterest"},
+        {src:"images/obiwan.jpeg", alt:"Obi_wan_by_Algozel_Pinterest"}
       ];
     
       let starWarsPerson = document.querySelector("#placeHolder");
@@ -43,14 +43,17 @@ modified the script to include async/await fuctionality
       //add image into array object
       for (let x in arr) {
         if (arr) {
-          arr[x].image = img[x];
+          arr[x].image = img[x].src;
+          arr[x].alt = img[x].alt;
         }
       }
+      
 
       //use destructuring and array method to filter the elem in the array.
-      let newArr = arr.map(({ name, height, gender, image }) => {
-        return { name, height, gender, image };
+      let newArr = arr.map(({ name, height, gender, image, alt }) => {
+        return { name, height, gender, image, alt };
       });
+
 
       //this code block generates the list of names and their properties and attaches it to the html file
       for (let i = 0; i < newArr.length; i++) {
@@ -60,7 +63,7 @@ modified the script to include async/await fuctionality
         newPerson += `
                   <div class="card">
 
-                    <img src=${newArr[i].image} alt="random image">
+                    <img src=${newArr[i].image} alt=${newArr[i].alt}>
 
                     <div class="personInfo">
                       <h3 class="name">${newArr[i].name}</h3>
