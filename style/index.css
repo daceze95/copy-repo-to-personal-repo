@@ -31,6 +31,29 @@ header p{
   color:antiquewhite;
 } 
 
+.btn{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button{
+  width: 100px;
+  padding: 5px;
+  background-color: rgb(206, 206, 234);
+  text-align: center;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 0px;
+  margin: 10px 10px;
+  color: rgb(5, 36, 64);
+}
+
+/* button:hover{
+
+} */
+
 div#placeHolder{
 display: flex;
 flex-wrap: wrap;

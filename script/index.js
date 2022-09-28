@@ -1,4 +1,6 @@
 async function main() {
+ const url = "https://swapi.dev/api/people/?page=1"
+
  
  const apiUrl = await fetch("https://swapi.dev/api/people");
 
@@ -32,7 +34,9 @@ modified the script to include async/await fuctionality
         {src:"images/Biggs.jpeg", alt:"Biggs_by_thefloodgallery.com Pinterest"},
         {src:"images/obiwan.jpeg", alt:"Obi_wan_by_Algozel_Pinterest"}
       ];
-    
+
+      // let button = document.querySelector(".btn");
+
       let starWarsPerson = document.querySelector("#placeHolder");
     
       let newPerson = "";
@@ -50,16 +54,18 @@ modified the script to include async/await fuctionality
       
 
       //use destructuring and array method to filter the elem in the array.
+      //Therefore, the filtered array is what we work with
       let newArr = arr.map(({ name, height, gender, image, alt }) => {
         return { name, height, gender, image, alt };
       });
 
 
+        
+               
+
       //this code block generates the list of names and their properties and attaches it to the html file
       for (let i = 0; i < newArr.length; i++) {
-
-        // document.querySelector('#text').parentElement.removeChild('#text');
-
+        // document.querySelector('#text').parentElement.removeChild('#text')
         newPerson += `
                   <div class="card">
 
@@ -86,5 +92,3 @@ modified the script to include async/await fuctionality
 main();
 
 // module.exports = { main };
-
-
